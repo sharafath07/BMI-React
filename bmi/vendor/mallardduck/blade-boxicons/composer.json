@@ -1,0 +1,63 @@
+{
+    "name": "mallardduck/blade-boxicons",
+    "description": "A package to easily make use of Boxicons in your Laravel Blade views.",
+    "keywords": [
+        "Laravel",
+        "Boxicons",
+        "Blade UI Kit"
+    ],
+    "homepage": "https://github.com/mallardduck/blade-boxicons",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dan Pock",
+            "homepage": "https://danpock.me",
+            "role": "Maintainer"
+        },
+        {
+            "name": "João Oliveira",
+            "email": "joao@joliveira.pt",
+            "homepage": "https://joliveira.pt",
+            "role": "Original Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "blade-ui-kit/blade-icons": "^1.5"
+    },
+    "replace": {
+        "jfvoliveira/blade-boxicons": "1.1.2"
+    },
+    "require-dev": {
+        "ext-dom": "*",
+        "orchestra/testbench": "^6.0 || ^7.0 || ^8.0",
+        "phpunit/phpunit": "^8.5.14 || ^9.0",
+        "spatie/phpunit-snapshot-assertions": "^4.2"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MallardDuck\\BladeBoxicons\\BladeBoxiconsServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MallardDuck\\BladeBoxicons\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MallardDuck\\BladeBoxicons\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "generate": "npm install && php ./vendor/bin/blade-icons-generate",
+        "test": "vendor/bin/phpunit"
+    }
+}

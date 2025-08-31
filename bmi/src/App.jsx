@@ -1,11 +1,14 @@
 import React from 'react';
 import Form from './Form';
-import './App.css'
+import Result from './Result';
+import './white.css';
+import './dark.css';
 
 function App() {
   return (
     <div>
-      <Form/>
+      {/* <Form/> */}
+      <Result/>
     </div>
   )
 }
