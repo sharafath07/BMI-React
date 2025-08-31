@@ -5,10 +5,10 @@ import './white.css';
 import './dark.css';
 
 function App() {
+
   return (
     <div>
-      {/* <Form/> */}
-      <Result/>
+      <Form/>
     </div>
   )
 }

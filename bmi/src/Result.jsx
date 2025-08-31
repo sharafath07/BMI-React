@@ -1,12 +1,11 @@
 import React from 'react';
-import back_black from './assets/back_black.png'
 
 function Result() {
   return (
     <div className='container'>
       <header>
         <div class="back" onClick={()=>{window.location.reload();}}>
-          <img src={back_black} alt="" />
+          <div></div>
         </div>
         <div className='darkmode'>
           <input type="checkbox" class="theme-checkbox"/>
