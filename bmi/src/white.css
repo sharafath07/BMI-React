@@ -284,32 +284,35 @@ h4{
 }
 
 .theme-checkbox:checked::before {
-  left: calc(100% - 39px );
+  left: calc(100% - 35px );
   background-position: 0;
-  top: 1px;
+  top: 2px;
+  width: 32px;
+  height: 32px;
 }
 
 .theme-checkbox:checked {
   background-position: 100%;
   border: 2px solid #F1F1f1;
-
 }
 .back{
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border: solid;
   border-width: 0 0 6px 6px; /* only left & bottom visible */
-  border-image: linear-gradient(to bottom, #ccc, #555) 1;
+  border-color: #1f1f1f;
   transform: rotate(45deg); /* tilt to make it look like < */
   display: inline-block;
 }
 .content{
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  background-color: #F1F1F1;
   text-align: center;
 }
 .content>h4{

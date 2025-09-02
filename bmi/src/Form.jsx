@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 
-function Form() {
+function Form({mode, setMode,bmi, setBmi, calculate, calculateRange, calculateMin, calculateMax}) {
     const [height, setHeight] = useState(150);
-    const [weight, setWeight] = useState(50);
-    const [mode, setMode] = useState(true);
+    const [weight, setWeight] = useState(640);
+    const [click, setClick] = useState(false)
 
-    function calculate(){
-        const BMI = weight/((height/100)*(height/100))
-        
-    }
-
+    useEffect(()=>{
+        calculate(weight,height)
+        calculateRange()
+        calculateMin(height)
+        calculateMax(height)
+    },[click])
   return (
     <div className={mode?"container":"dark-container"} >
         <header className={mode?"header":"dark-header"}>
@@ -31,7 +33,7 @@ function Form() {
         </div>
         <div className={mode?"weight-container":"dark-weight-container"}>
             <div class={mode?"arrow btn left":"arrow dark-btn left"} onClick={()=>{
-                if(weight >= 2)
+                if(weight >= 11)
                     setWeight(weight-1)
             }}>
             </div>
@@ -45,7 +47,7 @@ function Form() {
             }}>
             </div>
         </div>
-        <button className={mode?'calculate':'dark-calculate'}>Calculate</button>
+        <button className={mode?'calculate':'dark-calculate'} onClick={()=>{setClick(!click)}}>Calculate</button>
         
       
     </div>

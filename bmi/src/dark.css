@@ -214,3 +214,61 @@
 .dark-btn.right:active::before, .dark-btn.left:active::before{
   filter: drop-shadow(0px 0px 0px rgb(255, 255, 255));
 }
+.dark-back{
+  width: 20px;
+  height: 20px;
+  border: solid;
+  border-width: 0 0 6px 6px; 
+  border-color: #f1f1f1;
+  transform: rotate(45deg); 
+  display: inline-block;
+}
+.dark-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  color: #F1F1F1 ;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+.dark-content>h4{
+  font-size: 60px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25);    
+
+  line-height: 60px;
+}
+.dark-content>h1{
+  font-size: 200px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 150px;
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25);    
+}
+.dark-content>h2{
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  line-height: 70px;
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25);    
+}
+.dark-content>p{
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin: 0;
+  color: #ffffffb9;
+  line-height: 40px;
+}
+.dark-content>p>span{
+  font-family: "Work Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  color: #f1f1f1;
+}
