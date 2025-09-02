@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-function Result({mode, setMode, bmi, min, max, range, color}) {
+function Result({mode, setMode, bmi, min, max, range, color, setShowResult}) {
   
   return (
     <div className='container'>
       <header className={mode?"header": "dark-header"}>
-        <div class={mode?'back': "dark-back"} onClick={()=>{window.location.reload();}}>
+        <div className={mode?'back': "dark-back"} onClick={()=>{setShowResult(false) }}>
           <div></div>
         </div>
         <div className='darkmode'>
-          <input type="checkbox" class="theme-checkbox" onClick={()=>setMode(!mode)}/>
+          <input type="checkbox" className="theme-checkbox" onClick={()=>setMode(!mode)}/>
         </div>
       </header>
       <div className={mode?"content":"dark-content"}>
